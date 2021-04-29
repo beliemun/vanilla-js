@@ -13,12 +13,12 @@ const nameText = document.querySelector(".top__right__name");
 const resetButton = document.querySelector(".top__right__reset");
 
 const getWeather = (lat, lon) => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
         .then(res => res.json())
         .then(data => {
             const { name, main: { humidity, temp, } } = data;
             cityText.innerText = `위치: ${name}`;
-            tempText.innerText = `현재 온도: ${temp}도`;
+            tempText.inner  Text = `현재 온도: ${temp}도`;
             humidityText.innerText = `습도: ${humidity}%`;
         });
 }
