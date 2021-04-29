@@ -96,6 +96,7 @@ function init() {
     loadCoords();
     loadUserName();
     setInterval(() => { getTime() }, 1000);
+
     nameForm.addEventListener("submit", (e) => saveUserName(e, nameText.value));
     resetButton.addEventListener("click", resetName);
 }
