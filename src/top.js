@@ -18,7 +18,7 @@ const getWeather = (lat, lon) => {
         .then(data => {
             const { name, main: { humidity, temp, } } = data;
             cityText.innerText = `위치: ${name}`;
-            tempText.inner = `현재 온도: ${temp}도`;
+            tempText.innerText = `현재 온도: ${temp}도`;
             humidityText.innerText = `습도: ${humidity}%`;
         });
 }
